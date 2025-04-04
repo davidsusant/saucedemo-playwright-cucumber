@@ -1,0 +1,36 @@
+{
+  "name": "saucedemo-playwright-cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:parallel": "cucumberjs --parallel=4",
+    "allure:generate": "allure generate ./reports/allure-results -o ./reports/allure-report --clean",
+    "allure:open": "allure open ./reports/allure-report",
+    "test:report": "npm run test && npm run allure:generate && npm run allure:open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsusant/saucedemo-playwright-cucumber.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidsusant/saucedemo-playwright-cucumber/issues"
+  },
+  "homepage": "https://github.com/davidsusant/saucedemo-playwright-cucumber#readme",
+  "dependencies": {
+    "@cucumber/pretty-formatter": "^1.0.1",
+    "@playwright/test": "^1.51.1",
+    "chai": "^5.2.0"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "allure-commandline": "^2.33.0",
+    "allure-cucumberjs": "^3.2.1",
+    "cucumber-html-reporter": "^7.2.0",
+    "playwright": "^1.51.1"
+  }
+}
